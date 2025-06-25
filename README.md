@@ -5,7 +5,7 @@
  *    - While the backend is being pinged to validate the ID, show a small spinner at the end of the input box.
  *    - If the ID is valid:
  *       - Smoothly reveal a dropdown-style password field for the user to choose a HYBE password.
- *       - Once password is entered, update the main button text to: "Create Account".
+ *       - Once password is entered, update the main button text free to: "Create Account".
  * 
  * 2. When the user clicks "Create Account":
  *    - Show a modal (popup) that includes:
