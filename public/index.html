@@ -316,6 +316,14 @@
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> <span>Processing...</span>';
 
+      // Backend wake-up ping (live function)
+      let healthUrl = "/health";
+      if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
+        healthUrl = "https://hybe-panel.onrender.com/health";
+      }
+      // Fire and forget, don't block UI
+      fetch(healthUrl, { method: "GET" }).catch(() => {});
+
       showProgressLoader();
 
       // Simulate server response delay
